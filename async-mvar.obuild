@@ -1,0 +1,14 @@
+name: Async_mvar
+version: 0.1.0
+synopsis: Mvar implementation for async
+obuild-ver: 1
+
+library async_mvar
+  modules:    Async_mvar
+  build-deps: core_kernel, async_kernel
+  src-dir:    lib
+
+test async_mvar
+  build-deps: core, async, async_mvar
+  src-dir:    lib_test
+  main:       test_async_mvar.ml
